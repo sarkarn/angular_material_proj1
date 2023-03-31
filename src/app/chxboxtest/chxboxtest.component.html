@@ -1,0 +1,59 @@
+<mat-checkbox>
+    Subscribe
+</mat-checkbox>
+<br>
+<mat-checkbox labelPosition="before">
+    Subscribe
+</mat-checkbox>
+<br>
+<mat-checkbox labelPosition="before" color="primary">
+    Subscribe
+</mat-checkbox>
+
+<br>
+<mat-radio-group>
+    <mat-radio-button value="Angular">Angular</mat-radio-button >
+    <mat-radio-button value="react">React </mat-radio-button>
+    <mat-radio-button value="vue">Vue</mat-radio-button>
+</mat-radio-group>
+
+<br>
+<mat-form-field>
+    <input matInput [matDatepicker]="myDatePicker">
+    <mat-datepicker-toggle  [for]="myDatePicker" matSuffix>
+
+    </mat-datepicker-toggle>
+    <mat-datepicker #myDatePicker></mat-datepicker>
+</mat-form-field>
+
+<br>
+<mat-form-field>
+    <input matInput [matDatepicker]="myDatePicker1">
+    <mat-datepicker-toggle  [for]="myDatePicker1" matSuffix>
+
+    </mat-datepicker-toggle>
+    <mat-datepicker #myDatePicker1 startView="year"></mat-datepicker>
+</mat-form-field>
+
+<br>
+<mat-form-field>
+    <input matInput [matDatepicker]="myDatePicker2">
+    <mat-datepicker-toggle  [for]="myDatePicker2" matSuffix>
+
+    </mat-datepicker-toggle>
+    <mat-datepicker #myDatePicker2 startView="multi-year"></mat-datepicker>
+</mat-form-field>
+
+<br>
+<mat-form-field>
+    <input matInput [matDatepicker]="myDatePicker3" [min]="minDate" [max]="maxDate" [matDatepickerFilter]="dateFilter">
+    <mat-datepicker-toggle  [for]="myDatePicker3" matSuffix>
+
+    </mat-datepicker-toggle>
+    <mat-datepicker #myDatePicker3 ></mat-datepicker>
+</mat-form-field>
+
+<br>
+<br>
+<button mat-raised-button matTooltip="welcome" matTooltipPosition="after" matTooltipShowDelay="2000"
+matTooltipHideDelay="4000">Hello</button>

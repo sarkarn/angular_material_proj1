@@ -1,0 +1,46 @@
+
+<mat-form-field>
+    <mat-label>Topic</mat-label>
+
+    <mat-select [(value)]="selectedValue">
+        <mat-option value="option1">Option 1</mat-option>
+        <mat-option value="option2">Option 2</mat-option>
+        <mat-option value="option3">Option 3</mat-option>
+    </mat-select>
+</mat-form-field>
+
+
+<mat-form-field>
+    <mat-label>UI Language</mat-label>
+
+    <mat-select>
+        <mat-option >None</mat-option>
+        <mat-optgroup label="Web">
+            <mat-option value="angular">Angular</mat-option>
+            <mat-option value="vue">Vue</mat-option>
+            <mat-option value="react">React</mat-option>
+        </mat-optgroup>
+        <mat-optgroup label="Mobile">
+            <mat-option value="ionic">Ionic</mat-option>
+            <mat-option value="reactnative">React Native</mat-option>
+        </mat-optgroup>
+    </mat-select>
+</mat-form-field>
+
+
+<mat-form-field>
+    <mat-label>Multi Select UI Language</mat-label>
+
+    <mat-select multiple>
+        <mat-option >None</mat-option>
+        <mat-optgroup label="Web">
+            <mat-option value="angular">Angular</mat-option>
+            <mat-option value="vue">Vue</mat-option>
+            <mat-option value="react">React</mat-option>
+        </mat-optgroup>
+        <mat-optgroup label="Mobile">
+            <mat-option value="ionic">Ionic</mat-option>
+            <mat-option value="reactnative">React Native</mat-option>
+        </mat-optgroup>
+    </mat-select>
+</mat-form-field>

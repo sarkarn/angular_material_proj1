@@ -1,0 +1,58 @@
+<mat-toolbar color="primary">
+  <mat-toolbar-row>
+    <button mat-icon-button>
+      <mat-icon (click)="sidenav.toggle()">menu</mat-icon>
+    </button>
+  
+    <h1>SimpleCRM</h1>
+
+    <buttton mat-flat-button [matMenuTriggerFor]="appMenu">Menu</buttton>
+    <span class="menu-spacer"></span>
+    <div>
+      <a mat-button [routerLink]="'/accounts'"> Accounts </a>
+      <a mat-button [routerLink]="'/contacts'"> Contacts </a>
+      <a mat-button [routerLink]="'/activity'"> Activities </a>
+      <a mat-button [routerLink]="'/admin'"> Admin </a>
+      <a mat-button [routerLink]="'/formtest'"> Material Form Demo </a>
+      <a mat-button [routerLink]="'/chxboxtest'">Checkbox Test </a>
+      <a mat-button [routerLink]="'/snackbar'">Snack Bar </a>
+      <a mat-button [routerLink]="'/dialog'">Dialog </a>
+      <a mat-button [routerLink]="'/datatable'">Data Table </a>
+      <a mat-button [routerLink]="'/login'"> Login </a>
+    </div>
+  </mat-toolbar-row>
+
+  <mat-toolbar-row>
+      <span style="font-size: 12px;">SimpleCRM helps you easily manage your contacts</span>
+   </mat-toolbar-row>
+</mat-toolbar>
+
+
+<mat-sidenav-container>
+  <mat-sidenav #sidenav mode="push">
+    <mat-nav-list>
+      <a mat-list-item [routerLink]="'/accounts'"> Accounts </a>
+      <a mat-list-item [routerLink]="'/accounts'"> Create Account </a>
+      <a mat-list-item [routerLink]="'/contacts'"> Contacts </a>
+      <a mat-list-item [routerLink]="'/contacts'"> Create Contact </a>
+      <a mat-list-item > Activities </a>
+      <a mat-list-item > Create Activity </a>
+      <a mat-list-item (click)="sidenav.toggle()" href="" mat-list-item>Close</a>
+    </mat-nav-list>
+  </mat-sidenav>
+  <mat-sidenav-content>
+    <div style="height: 88vh;">
+      <router-outlet></router-outlet>
+    </div>
+  </mat-sidenav-content>
+</mat-sidenav-container>
+
+<mat-menu #appMenu="matMenu" xPosition="after" yPosition="below">
+  <button mat-menu-item [matMenuTriggerFor]="subMenu">Front End</button>
+  <button mat-menu-item>Back End</button>
+</mat-menu>
+
+<mat-menu #subMenu="matMenu">
+  <button mat-menu-item>Angular</button>
+  <button mat-menu-item>React</button>
+</mat-menu>

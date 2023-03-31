@@ -1,0 +1,57 @@
+
+
+<mat-tab-group #tabRef (selectedTabChange)="logChange(tabRef.selectedIndex)">
+    <mat-tab label="Angular">Angular</mat-tab>
+    <mat-tab label="Vue">Vue</mat-tab>
+    <mat-tab label="React">React</mat-tab>
+</mat-tab-group>
+{{tabRef.selectedIndex}}
+
+<mat-card>Basic Card</mat-card>
+
+<mat-card>
+    <mat-card-title>Card Title</mat-card-title>
+    <mat-card-content>Card Content</mat-card-content>
+    <mat-card-actions align="end">
+        <button mat-flat-button >Login</button>
+    </mat-card-actions>
+
+</mat-card>
+
+<mat-horizontal-stepper>
+    <mat-step label="Step 1">Step 1</mat-step>
+    <mat-step label="Step 2">Step 2
+        <div>
+            <button mat-button matStepperPrevious>Back</button>
+            <button mat-button matStepperNext>Next</button>
+        </div>
+    </mat-step>
+    <mat-step label="Step 3">Step 3</mat-step>
+    <mat-step label="Step 4">Step 4</mat-step>
+</mat-horizontal-stepper>
+
+
+<mat-horizontal-stepper linear>
+    <mat-step label="Step 1" completed="true">Step 1</mat-step>
+    <mat-step label="Step 2" completed="false">Step 2
+        <div>
+            <button mat-button matStepperPrevious>Back</button>
+            <button mat-button matStepperNext>Next</button>
+        </div>
+    </mat-step>
+    <mat-step label="Step 3">Step 3</mat-step>
+    <mat-step label="Step 4">Step 4</mat-step>
+</mat-horizontal-stepper>
+
+
+<mat-vertical-stepper>
+    <mat-step label="Step 1">Step 1</mat-step>
+    <mat-step label="Step 2">Step 2
+        <div>
+            <button mat-button matStepperPrevious>Back</button>
+            <button mat-button matStepperNext>Next</button>
+        </div>
+    </mat-step>
+    <mat-step label="Step 3">Step 3</mat-step>
+    <mat-step label="Step 4">Step 4</mat-step>
+</mat-vertical-stepper>
